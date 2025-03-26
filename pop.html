@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .popup{
+            min-width: 344px;
+            min-height: 188px;
+            background-color: #ffff;
+            box-shadow: 0px 4px 4px rgb(0,0,0,0.25);
+            border-radius: 10px;
+            padding: 1rem;
+        }
+
+        h1{
+            font-size: 1.5rem;
+            text-align: center;
+
+        }
+        .yellow{
+            color: rgb(242, 143, 143);
+        }
+
+        .button{
+            background-color: rgb(157, 233, 157);
+            position: relative;
+            height: 35px;
+            width: 70px;
+            border-radius: 20px;
+            transition: 1s;
+            cursor: pointer;
+        }
+
+        .half{
+            position: absolute;
+            width: 50%;
+            top:50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+            
+        }
+        
+
+        .circle{
+            position: relative;
+            top: 0;
+            left: 0;
+            height: 34px;
+            width: 32px;
+            border-radius: 50%;
+            background-color: yellow;
+            pointer-events: none;
+            transition: 1s;
+        }
+
+        @keyframes transformToBlue{
+            0%{
+                background-color: yellow;
+            }
+            100%{
+                background-color: blue;
+            }
+        }
+
+        @keyframes transformToYellow{
+            0%{
+                background-color:blue;
+            }
+            100%{
+                background-color: yellow ;
+            }
+        }
+        @keyframes moveCircleRight{
+            0%{
+                left:0;
+                transform : translateX(0);
+                background-color: yellow;
+            }
+            100%{
+                left: 100%;
+                transform : translateX(100%);
+                background-color: blue;
+            }
+        }
+        @keyframes moveCircleLeft{
+            0%{
+                left: 100%;
+                transform : translateX(100%);
+                background-color: blue;
+                
+            }
+            100%{
+                left:0;
+                transform : translateX(0);
+                background-color: yellow;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="popup">
+        <h1>
+            <span  class="yellow">
+                Appearance
+            </span>
+        </h1>
+        <p>Bored of looking at websites the sameway? meet appearance
+            chrome extension thatn can change your wesite
+        </p>
+
+        <div class="button">
+            <div class="half" style="left: 5px;">on</div>
+            <div class="half" style="right: 5px; text-align: right;">off</div>
+            <div class="circle">
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="popup.js"></script>
+</body>
+</html>

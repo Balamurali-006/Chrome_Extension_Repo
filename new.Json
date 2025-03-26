@@ -1,0 +1,23 @@
+{
+    "name":"Appearance",
+    "description": "go from light mode to dark mode",
+    "version":"1.0.0",
+    "manifest_version": 3,
+    "background":{
+        "scripts":[
+            "popup.js"
+        ],
+        "persistent" : true
+    },
+    "browser_action " : {
+        "default_title" : "Appearance",
+        "default_popup":"popup.html"
+
+    },
+    "permissions":[
+        "<all_urls>",
+        "tabs"
+    ]
+    
+
+}
